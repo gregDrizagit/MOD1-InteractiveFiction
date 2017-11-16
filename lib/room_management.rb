@@ -12,6 +12,7 @@ def enter_room_description(user)
       puts room.visited_description
     else
       puts room.description
+      leave_room(user)
     end
       #room_description(user.room_id)
   elsif user.room_id == 5

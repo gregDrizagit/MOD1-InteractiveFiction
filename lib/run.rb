@@ -88,8 +88,8 @@ require_relative '../config/environment.rb'
 def run
   greeting
   user = make_user
-  room_description(user.room_id)
-  list_items_in_room(user.room_id)
+  enter_room_description(user)
+  #list_items_in_room(user.room_id)
   puts "What would you like to do? 1. Move Forward. 2. Leave, 3. Pick up"
   input = gets.chomp.downcase
   until input == "exit"
@@ -135,7 +135,7 @@ end
 #
 #   candy_bar = Item.create(name: "candy bar")
 #   Room.all.last.items << candy_bar
-# 
+#
 #   sword = Item.create(name: "sword")
 #   Room.all.first.items << sword
 #

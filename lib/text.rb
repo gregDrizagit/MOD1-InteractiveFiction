@@ -1,3 +1,21 @@
+class TextBlobs
+
+  def self.room_5_end_blob
+    puts room5End = <<-text
+
+    The screams are definitely coming from here. Where is this anyway? You recognize this place. It looks like the old high school. You try to open the door...it opens! There’s something else here. A low grumble as if you’ve unsettled the world itself. You turn a corner and see the gymnasium ahead. You walk inside. Everything is dark. You can hardly see anything besides the light you’re carrying. You move forward and you see her. Is she sleep? As you run toward her every cell in your body suddenly freezes. You can’t see it but you know it’s here: The Demogorgon.
+
+    You finally see it rushing toward you from your left you. You try using every weapon you have but it’s no use. Nothing can kill this thing. It’s getting closer. It’s no longer running but slowly walking, stalking, as if it knows this is game over. It stands a few feet in front of you. All you can see is it’s face...open...ready to eat. It crouches back and puts its weight on its legs. You know it’s ready to pounce. Here it comes. You close your eyes. Swing wildly with no aim. Your only thought is survival. You hear a screech! It’s gone, the floor is red. You look in your hands and you see...the bat?!? Did that actually work? You grab the girl and run out of the school, through the woods, through the portal and finally you’re back in the lab. It might be time to put in your notice...
+
+    text
+  end
+
+
+end
+
+
+
+
 intro = <<-text
 
 The year is 1980. Location: Hawkins, Indiana. You recently received a PhD in neuropharmacology from the CalTech. You were hired by the CIA to work on a top secret black budget project. Indiana bores you half to tears but the pay is extraordinary. Last week was your first on the job. This week, it all went to shit when a “patient” subject went “missing”. How the patient, a small child, managed to escape a maximum security government compound is beyond the imagination of everyone here.
@@ -8,9 +26,9 @@ text
 
 room1Desc1 = <<-text
 
-You’re being escorted down the hall to the staging area by the campus' armed guards. You couldn’t back out of this now even if you wanted to. Your palms are sweating. The sterile fluorescent light and smell of heavy chemical disinfectant makes you nauseous. The pale and putrid seafoam green walls and surfaces remind you of a hospital but one with far more sinister motives. They took you to a psychological evaluation, then to a heavy chemical shower to eliminate the risk for contamination.
+You’re being escorted down the hall to the staging area by the campus' armed guards. You couldn’t back out of this now even if you wanted to. Your palms are sweating. The sterile fluorescent light and smell of heavy chemical disinfectant makes you nauseous. The pale and putrid seafoam green walls and surfaces remind you of a hospital but one with far more sinister motives. They took you to a psychological evaluation, then to a heavy chemical shower to eliminate the risk for contamination. T
 
-The space contains equipment that you'd find in both a surgical theatre and a police interrogation room. Laid out in front of you is a yellow hazmat suit. You step into the suit. The teflon and neoprene feels protective and extremely warm around your skin. Pure oxygen is piped in through the back of the plexiglass helmet. The air is cold and burns the tip of your nostrils as you inhale, and energizes you as you take short nervous breaths. It’s still not clear where you’re going exactly. You know better than to ask...
+he space contains equipment that you'd find in both a surgical theatre and a police interrogation room. Laid out in front of you is a yellow hazmat suit. You step into the suit. The teflon and neoprene feels protective and extremely warm around your skin. Pure oxygen is piped in through the back of the plexiglass helmet. The air is cold and burns the tip of your nostrils as you inhale, and energizes you as you take short nervous breaths. It’s still not clear where you’re going exactly. You know better than to ask...
 
 You check your locker and you find...
 
@@ -79,12 +97,3 @@ The screams are definitely coming from here. Where is this anyway? You recognize
 You finally see it rushing toward you from your left you. You try using every weapon you have but it’s no use. Nothing can kill this thing. It’s getting closer. It’s no longer running but slowly walking, stalking, as if it knows this is game over. It stands a few feet in front of you. All you can see is it’s face...open...ready to eat. It crouches back and puts its weight on its legs. You know it’s ready to pounce. Here it comes. You close your eyes. Swing wildly with no aim. Your only thought is survival. You hear a screech! It’s gone, the floor is red. You look in your hands and you see...the bat?!? Did that actually work? You grab the girl and run out of the school, through the woods, through the portal and finally you’re back in the lab. It might be time to put in your notice...
 
 text
-
-room1 = Room.create(description:room1Desc1, visited_description: room1Desc2, has_visited: false)
-room2 = Room.create(description:room2Desc1, visited_description: room2Desc2, has_visited: false)
-room3 = Room.create(description:room3Desc1, visited_description: room3Desc2, has_visited: false)
-room4 = Room.create(description:room4Desc1, visited_description: room4Desc2, has_visited: false)
-room5 = Room.create(description:room5NoCrow, visited_description: room5NoBat, has_visited: false)
-
-
-# user1 = User.create(name: "Greg")

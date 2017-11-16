@@ -9,35 +9,19 @@ def delete_all_items
 end
 
 def create_all_items
-  backpack = Item.create(name: "backpack")
-  Room.all[0].items << backpack
+  first_aid = Item.create(name: "first aid kit")
+  Room.all[0].items << first_aid
 
   flashlight = Item.create(name: "flashlight")
   Room.all[0].items << flashlight
 
-  candy_bar = Item.create(name: "candy bar")
-  Room.all[1].items << candy_bar
+  bat = Item.create(name: "bat with nails")
+  Room.all[1].items << bat
 
-  sword = Item.create(name: "sword")
-  Room.all[1].items << sword
+  firearm = Item.create(name: "firearm")
+  Room.all[1].items << firearm
 
-  rock = Item.create(name: "rock")
-  Room.all[2].items << rock
-
-  bottle = Item.create(name: "bottle")
-  Room.all[2].items << bottle
-
-  toothbrush = Item.create(name: "toothbrush")
-  Room.all[3].items << toothbrush
-
-  wallet = Item.create(name: "wallet")
-  Room.all[3].items << wallet
-
-
-  soda = Item.create(name: "soda")
-  Room.all[4].items << soda
-
-  walking_stick = Item.create(name: "walking_stick")
-  Room.all[4].items << walking_stick
+  crowbar = Item.create(name: "crowbar")
+  Room.all[3].items << crowbar
 
 end

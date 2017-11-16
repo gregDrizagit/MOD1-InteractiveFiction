@@ -87,21 +87,40 @@ require_relative '../config/environment.rb'
 
 def run
   greeting
+  puts text = <<-text
+
+    What is your name?
+
+  text
   user = make_user
   enter_room_description(user)
-  #list_items_in_room(user.room_id)
-  puts "What would you like to do? 1. Move Forward. 2. Leave, 3. Pick up"
+  # puts text = <<-text
+  #
+  # What would you like to do? Type 1 to Move Forward, 2 to Move Back, 3 to Pick Up an item
+  #
+  #   text
   input = gets.chomp.downcase
   until input == "exit"
     case input
       # input = gets.chomp
     when "1"
+      if user.room_id == 5
+        puts "There's nowhere to go"
+        input = "exit"
+      else
         enter_room(user)
         input = gets.chomp
+      end
     when "2"
+      if user.room_id == 1
+        puts "There's no way out"
+        puts "What would you like to do? Type 1 to Move Forward, 2 to Move Back, 3 to Pick Up an item"
+        input = gets.chomp
+      else
         leave_room(user)
         input = gets.chomp
-    when "pick up"
+      end
+    when "3"
       ## Must check valid input after prompting pick up item
       if get_items_in_room(user.room_id).length > 0
         list_items_in_room(user.room_id)
